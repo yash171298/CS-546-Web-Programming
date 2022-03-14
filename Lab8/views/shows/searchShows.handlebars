@@ -1,0 +1,26 @@
+
+<head>
+  <title>
+    Shows Found
+  </title>
+</head>
+<main>
+  <h1>Shows Found</h1>
+  <h2>
+    {{searchTerm}}
+  </h2>
+  <h2 id="SearchTerm"></h2>
+  {{#each shows}}  
+    <article class="show">
+        <ul>
+            <li><a href="http://localhost:3000/shows/{{this.id}}">{{this.name}}</a></li>
+            
+            
+            </ul>
+      
+    </article>
+  {{/each}}
+   {{#if hasErrors}}
+      <p class="not-found">We're sorry, but no results were found for {{searchTerm}}.</p>
+      {{/if}}
+</main>

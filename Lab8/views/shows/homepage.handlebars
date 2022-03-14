@@ -1,0 +1,47 @@
+<head>
+  <title>
+    Show Finder
+  </title>
+</head>
+<article class="searchshows">
+  <h1>Show Finder</h1>
+  <main>
+    <form action="/search" method="POST" class="new-show-form">
+    <label id="SearchTerm">
+     SearchTerm
+      <input type="text" name="searchTerm" id="Searchbar"  class="full-width-input"/>
+    </label>
+    <button type="submit" class="btn">submit</button>
+    </form>
+
+   
+  {{!-- <form action="shows/:id" method="GET" class="new-get-form">
+    <label>
+     type searchid
+      <input type="text" name="searchid"  class="full-width-input"/>
+    </label>
+    <button type="submit">Search Shows by id</button>
+    </form> --}}
+     {{#if hasErrors}}
+      <p class="error">We're sorry, but you should provide a searchTerm</p>
+      {{/if}}
+    {{#if hasErrors}}
+ 
+<p> {{errors}}</p>
+     
+    
+    {{!-- {{/each}} --}}
+ 
+  {{/if}}
+   {{#if gotErrors}}
+ 
+<p class="error"> {{errors}}</p>
+     
+    
+    {{!-- {{/each}} --}}
+ 
+  {{/if}}
+  </main>
+  
+
+</article>
